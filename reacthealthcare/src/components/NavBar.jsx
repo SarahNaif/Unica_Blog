@@ -1,7 +1,7 @@
 import React from 'react'
-import { Navbar , Nav} from 'react-bootstrap'
+import { Navbar , Button} from 'react-bootstrap'
 import { Link } from "react-router-dom";
-export default function NavBar() {
+export default function NavBar(props) {
     return (
         <>
       <Navbar bg="dark"  style={{opacity:0.5 } }>
@@ -13,10 +13,23 @@ export default function NavBar() {
         className="d-inline-block align-top"
         alt="React Bootstrap logo"
       />
+    
+
+      
+    </Navbar.Brand>
     <Navbar.Brand as={Link} to="/articles" style={{color:"white" , marginLeft:"30px"}}>
        Articles
       </Navbar.Brand>
-    </Navbar.Brand>
+      <Button
+      
+            onClick={() => {
+              console.log("Logging Out!");
+              localStorage.removeItem("jwtToken");
+              props.loginCallback();
+            }}
+          >
+            Logout
+          </Button>
   </Navbar>
       </>
     )

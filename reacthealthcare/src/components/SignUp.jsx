@@ -39,11 +39,12 @@ export default function SignUp() {
           )}
 
 
-        <Form className=" mt-5" >
-        <Row className="justify-content-md-center mt-5">
-          <Col md={8}>
+        <Form className=" d-flex  justify-content-center align-items-center align-content-center " >
+        <Row className=" mt-5">
+          <Col md={12}>
             <Form.Row>
-              <Col md={6}>
+              <Col md={12}>
+              <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label style={{color:"white"}}> Name</Form.Label>
                 <Form.Control
                   placeholder="Name "
@@ -51,12 +52,13 @@ export default function SignUp() {
                   onChange={(e) => onChangeInput(e)}
                  
                 />
+                 </Form.Group>
               </Col>
               
             </Form.Row>
 
             <Form.Row>
-            <Col md={6}>
+            <Col md={12}>
               <Form.Group as={Col} controlId="formGridEmail">
                 <Form.Label style={{color:"white"}}>Email</Form.Label>
                 <Form.Control
@@ -71,7 +73,7 @@ export default function SignUp() {
               </Form.Row>
 
               <Form.Row>
-              <Col md={6}>
+              <Col md={12}>
               <Form.Group as={Col} controlId="formGridPassword">
                 <Form.Label style={{color:"white"}}>Password</Form.Label>
                 <Form.Control
@@ -85,17 +87,18 @@ export default function SignUp() {
                 
               </Form.Group>
               </Col>
-            </Form.Row>
+              </Form.Row>
             <Button
+            className="ms-5 align-items-center"
               variant="primary"
               type="submit"
               value="button"
               onClick={(e) => onSubmit(e)}
-
              
             >
-             
+             Submit
             </Button>
+            
           </Col>
         </Row>
        
