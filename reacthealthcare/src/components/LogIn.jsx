@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory , Link} from "react-router-dom";
 import { Form, Button, Col, Row , Alert } from "react-bootstrap";
-
+import "./Signup.css"
 export default function Login(props) {
   const history = useHistory();
   const [credentials, setCredentials] = useState({ email: "", password: "" });
@@ -40,40 +40,34 @@ export default function Login(props) {
 
   
   return (
-    <Form className=" d-flex  justify-content-center align-items-center align-content-center " >
-    <Row className=" mt-5">
-        <Col md={10}>
-          <Form.Row>
-            <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="Enter email"
-                name="email"
-                onChange={(e) => onChangeInput(e)}
-            
-              />
-            </Form.Group>
-            </Form.Row>
-            <Form.Row>
-            <Form.Group as={Col} controlId="formGridPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Password"
-                name="password"
-                onChange={(e) => onChangeInput(e)}
-                
-              
-              />
-            </Form.Group>
-          </Form.Row>
-          <Button variant="primary" type="submit" onClick={(e) => onSubmit(e)} >
-            Submit
+    <>
+    <div class="signup-form">
+        
+         
+    <form action="" method="post">
+      <h2>Login</h2>
+      
 
-          </Button>
-        </Col>
-      </Row>
-    </Form>
+        <div className="form-group">
+          <input type="email" className="form-control" name="email" placeholder="Email Address" required="required"  onChange={(e) => onChangeInput(e)}/>
+      </div>
+          <div className="form-group">
+            <input type="password" className="form-control" name="password" placeholder="Password" required="required"  onChange={(e) => onChangeInput(e)}/>
+           </div>
+           <div className="form-group">
+                  <Link href="#">Forget Password ?</Link>
+              </div>
+            <br></br>
+           
+           <br></br>
+              
+                <div className="form-group text-center">
+                  <button type="submit" className="btn btn-primary btn-lg w-100 h-100" onClick={(e) => onSubmit(e)}>Login</button>
+                </div>
+   </form>
+   <div class="text-center">Dont have an account? <Link to="/login">Sign up here</Link></div>
+      </div>      
+      {/* we can add login with google OR facebook via pasport.js  */}
+      </>
   );
 }

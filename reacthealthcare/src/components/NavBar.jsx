@@ -1,27 +1,51 @@
 import React from 'react'
 import { Navbar , Button} from 'react-bootstrap'
 import { Link } from "react-router-dom";
+import "./Navbar.css"
 export default function NavBar(props) {
     return (
-        <>
-      <Navbar bg="dark"  style={{opacity:0.5 } }>
-    <Navbar.Brand href="/">
-      <img
-        src="https://ga-core.s3.amazonaws.com/cms/files/files/000/000/886/original/ga-logo-gear.png"
-        width="30"
-        height="30"
-        className="d-inline-block align-top"
-        alt="React Bootstrap logo"
-      />
-    
+        
+         <>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <Link class="navbar-brand" href="#">Unica 
+    <i className="fa fas fa-leaf"></i>
+    </Link>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
+        <li class="nav-item">
+          <Link class="nav-link active" aria-current="page" to="/">Home</Link>
+        </li>
+
+        <li class="nav-item">
+          <Link class="nav-link" to="/about">About Us</Link>
+        </li>
+
+        
+        
+      </ul>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+          <Link class="nav-link" to="/SignUp">SignUp</Link>
+        </li>
+
+        
+        <li class="nav-item">
+          <Link class="nav-link " to="/login"  >LogIn</Link>
+        </li>
+        <li class="nav-item">
+          <Link class="nav-link " to="/profile"  >UserProfile</Link>
+        </li>
+      </ul>
       
-    </Navbar.Brand>
-    <Navbar.Brand as={Link} to="/articles" style={{color:"white" , marginLeft:"30px"}}>
-       Articles
-      </Navbar.Brand>
-      <Button
-      
+    </div>
+    
+     <Button
             onClick={() => {
               console.log("Logging Out!");
               localStorage.removeItem("jwtToken");
@@ -30,7 +54,8 @@ export default function NavBar(props) {
           >
             Logout
           </Button>
-  </Navbar>
+  </div>
+</nav>
       </>
     )
 }

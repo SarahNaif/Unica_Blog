@@ -1,0 +1,13 @@
+body{
+    background-color:rgb(234, 242, 234);
+}
+.fa-leaf{
+color: #00c1c0;
+margin:9px;
+}
+ .nav-item:hover{
+    border-bottom: 3px solid rgb(98, 154, 98);
+}
+nav {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 50px 10px, rgba(0, 0, 0, 0.3) 0px 10px 60px -70px;
+}
