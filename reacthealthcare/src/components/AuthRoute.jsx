@@ -1,11 +1,12 @@
 import React from 'react'
 import { Route, Redirect } from "react-router-dom";
-import UserProfile from "./UserProfile"
+import Profile from './Profile';
+
 export default function AuthRoute(props) {
     if (props.auth.isLoggedIn) {
         return (
           <Route>
-          <UserProfile
+          <Profile
             setAuth={props.setAuth}
             auth = {props.auth} />
         </Route>

@@ -9,8 +9,9 @@ import NavBar from "./components/NavBar"
 import AllArticales from "./components/AllArticales"
 import SignUp from './components/SignUp';
 import Login from "./components/LogIn";
-
+import Profile from "./components/Profile";
 import AuthRoute from "./components/AuthRoute"
+import EditProfile from './components/EditProfile';
 
 function App() {
   const [dataLoading, setDataloading] = useState(false)
@@ -42,6 +43,11 @@ function App() {
             setAuth = {setAuth}
             auth={auth} />
           </Route>
+
+    <Route path = "/editprofile/:id">
+      <EditProfile 
+      auth={auth} />
+    </Route>
 
 
 
