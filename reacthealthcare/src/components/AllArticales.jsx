@@ -1,11 +1,37 @@
 import React from 'react'
 import { Col, Container, Form, Row } from 'react-bootstrap'
-export default function AllArticales() {
-    return (
-        <div>
-        <Container >
-            
 
+
+
+
+
+
+export default function AllArticales() {
+
+     /* =================
+     Hooks State  
+     ================= */
+
+
+
+      /* =================
+     Functions Handler  
+     ================= */
+
+
+
+
+
+
+
+
+ /* =======================
+     Foorm Displat all posts  
+     ====================== */
+
+    return (
+    <div>
+        <Container >
             <Row className="justify-content-md-center" >
                 <Col md="4" >
                     <Form >
@@ -19,11 +45,8 @@ export default function AllArticales() {
                 </Col>
             </Row>
             <Row className="justify-content-md-center">
-               
             </Row>
-
         </Container>
-    
     </div>
     )
 }

@@ -2,12 +2,19 @@ import React from 'react'
 import { Navbar , Button} from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import "./Navbar.css"
+
+
+  /* ===================
+      Navigation to pages 
+     ===================*/
+
+     
 export default function NavBar(props) {
     return (
         
-         <>
+       
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
+      <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,12 +47,12 @@ export default function NavBar(props) {
         </li>
         <li class="nav-item">
           <Link class="nav-link " to="/profile"  >UserProfile</Link>
-        </li>
+        </li> 
       </ul>
       
     </div>
     
-     <Button
+     <Button className ="btn btn-secondary"
             onClick={() => {
               console.log("Logging Out!");
               localStorage.removeItem("jwtToken");
@@ -56,6 +63,6 @@ export default function NavBar(props) {
           </Button>
   </div>
 </nav>
-      </>
+      
     )
 }

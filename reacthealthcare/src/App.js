@@ -12,6 +12,7 @@ import Login from "./components/LogIn";
 import Profile from "./components/Profile";
 import AuthRoute from "./components/AuthRoute"
 import EditProfile from './components/EditProfile';
+import AddPost from './components/AddPost';
 
 function App() {
   const [dataLoading, setDataloading] = useState(false)
@@ -47,6 +48,12 @@ function App() {
     <Route path = "/editprofile/:id">
       <EditProfile 
       auth={auth} />
+    </Route>
+
+
+
+    <Route path = "/new">
+      <AddPost   auth={auth}  />
     </Route>
 
 

@@ -39,7 +39,7 @@ export default function Profile(props) {
                         <h5 class="font-weight-bold mb-0 d-block">0</h5><small class="text-muted"> <i class="fa fas fa-image mr-1"></i>Posts</small>
                     </li>
                        <li>
-                       <a href="/articals" class="btn btn-outline-dark btn-sm btn-block">add posts</a>
+                       <a href="/new" class="btn btn-outline-dark btn-sm btn-block">add posts</a>
 
                        </li>
                       
@@ -48,7 +48,7 @@ export default function Profile(props) {
             
             <div class="py-4 px-4">
                 <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h5 class="mb-0">Recent Posts</h5><a href="#" class="btn btn-link text-muted">Show all</a>
+                    <h5 class="mb-0">Recent Posts</h5><a href="/articles" class="btn btn-link text-muted">Show all</a>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 mb-2 pr-lg-1"><img src="https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"/></div>
