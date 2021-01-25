@@ -11,7 +11,7 @@ export default function AddPost(props) {
 
   const { _id} = props.auth.currentUser;
   const history = useHistory();
-  const [post, setPost] = useState({ title: "", description: "" , markdown :"" , userId: _id });
+  const [post, setPost] = useState({ title: "", description: "" , markdown :"" , image:"",userId: _id });
 
 
  /* =================
@@ -55,6 +55,10 @@ export default function AddPost(props) {
           <h2>Add Post</h2>
           <div className="form-group">
               <input type="text" className="form-control" name="title" id="title" onChange={(e) => onChangeInput(e)}/>
+          </div>
+
+          <div className="form-group">
+                  <input type="text" className="form-control" name="image" placeholder="Enter Images"  onChange={(e) => onChangeInput(e)} />
           </div>
 
           <div class="form-group">

@@ -7,13 +7,13 @@ export default function OneCardArticle(props) {
         
         <Col md="4" sm="4" className="mt-3">
             <Card  className ="card-movie">
-                <Card.Img variant="top" src="" height ="300px" style={{    margin :"auto" , objectFit :"cover"}}  />
+                <Card.Img variant="top" src={props.url} height ="300px" style={{    margin :"auto" , objectFit :"cover"}}  />
                 <Card.Body>
                     <Card.Title>{props.title}</Card.Title>
                     <Card.Text>
-                        description : self improvement
+                        {props.type}
                         <br/>
-                        type : Self improvement
+                        {props.description}
                         <br/>
                         markdown :
                         <br/>

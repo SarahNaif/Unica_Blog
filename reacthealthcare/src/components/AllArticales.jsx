@@ -24,7 +24,10 @@ export default function AllArticales(props) {
 
      const allPosts = posts.map((ele,i)=>{
         return <OneCardArticle
-              title = {ele.title} />
+              title = {ele.title}
+              description ={ele.description}
+              type ={ele.type}
+              url = {ele.image} />
       })
 
 
