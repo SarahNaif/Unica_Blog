@@ -1,17 +1,31 @@
-import React from 'react'
 import { Col, Container, Form, Row } from 'react-bootstrap'
+import React, { useEffect, useState } from 'react'
+import OneCardArticle from './OneCardArticle'
+import Axios from 'axios'
 
 
 
-
-
-
-export default function AllArticales() {
+export default function AllArticales(props) {
 
      /* =================
      Hooks State  
      ================= */
+    const [posts ,setPosts ] = useState([])
 
+     const [types , setTypes] = useState([])
+
+     useEffect(()=>{
+         Axios.get('http://localhost:5000/api/articles')
+         .then((res)=>{
+            setPosts(res.data)
+         })
+     }, [])
+
+
+     const allPosts = posts.map((ele,i)=>{
+        return <OneCardArticle
+              title = {ele.title} />
+      })
 
 
       /* =================
@@ -30,7 +44,6 @@ export default function AllArticales() {
      ====================== */
 
     return (
-    <div>
         <Container >
             <Row className="justify-content-md-center" >
                 <Col md="4" >
@@ -45,8 +58,8 @@ export default function AllArticales() {
                 </Col>
             </Row>
             <Row className="justify-content-md-center">
+                {allPosts.length !==0 ? allPosts : (<h1>Loading posts ... </h1>)}
             </Row>
         </Container>
-    </div>
     )
 }

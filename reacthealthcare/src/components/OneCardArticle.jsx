@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 ;
-export default function OneCardArticle() {
+export default function OneCardArticle(props) {
     return (
         <>
         
@@ -9,7 +9,7 @@ export default function OneCardArticle() {
             <Card  className ="card-movie">
                 <Card.Img variant="top" src="" height ="300px" style={{    margin :"auto" , objectFit :"cover"}}  />
                 <Card.Body>
-                    <Card.Title>Self Improvement</Card.Title>
+                    <Card.Title>{props.title}</Card.Title>
                     <Card.Text>
                         description : self improvement
                         <br/>
