@@ -13,12 +13,12 @@ export default function NavBar(props) {
     return (
         
        
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light ">
       <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <Link class="navbar-brand" href="#">Unica 
+    <Link className="navbar-brand" href="#"><span className="fs-3 fw-bold">U</span>nica 
     <i className="fa fas fa-leaf"></i>
     </Link>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -30,6 +30,9 @@ export default function NavBar(props) {
 
         <li class="nav-item">
           <Link class="nav-link" to="/about">About Us</Link>
+        </li>
+        <li class="nav-item">
+          <Link class="nav-link" to="/articles">Articles</Link>
         </li>
 
         
@@ -46,21 +49,23 @@ export default function NavBar(props) {
           <Link class="nav-link " to="/login"  >LogIn</Link>
         </li>
         <li class="nav-item">
-          <Link class="nav-link " to="/profile"  >UserProfile</Link>
+          <Link class="nav-link " to="/profile"  ><i className="fa fas fa-user text-dark"></i></Link>
         </li> 
       </ul>
       
     </div>
     
-     <Button className ="btn btn-secondary"
+     <button className ="log-btn"
             onClick={() => {
               console.log("Logging Out!");
               localStorage.removeItem("jwtToken");
               props.loginCallback();
             }}
           >
-            Logout
-          </Button>
+            <i class="fa fa-sign-out text-dark" ></i>
+          </button>
+
+          
   </div>
 </nav>
       

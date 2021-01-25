@@ -54,11 +54,11 @@ export default function EditProfile(props) {
           <h2>Edit Profile</h2>
 
           <div className="form-group">
-              <input type="name" className="form-control" name="name" placeholder="Your name" required="required" onChange={(e) => onChangeInput(e)}/>
+              <input type="name" className="form-control" name="name" placeholder="Your name"  onChange={(e) => onChangeInput(e)}/>
           </div>
 
           <div className="form-group">
-              <input type="email" className="form-control" name="email" placeholder="Email Address" required="required" onChange={(e) => onChangeInput(e)}/>
+              <input type="email" className="form-control" name="email" placeholder="Email Address"  onChange={(e) => onChangeInput(e)}/>
           </div>
 
           <div className="form-group">
@@ -66,7 +66,7 @@ export default function EditProfile(props) {
           </div>
                 
           <div className="form-group">
-                  <input type="text" className="form-control" name="image" placeholder="Enter Images" required="required" onChange={(e) => onChangeInput(e)}/>
+                  <input type="text" className="form-control" name="image" placeholder="Enter Images"  onChange={(e) => onChangeInput(e)}/>
           </div>
 
           <div className="form-group text-center">

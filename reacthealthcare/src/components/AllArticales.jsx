@@ -11,31 +11,50 @@ export default function AllArticales(props) {
      Hooks State  
      ================= */
     const [posts ,setPosts ] = useState([])
+    const [types , setTypes] = useState([])
+    const [selectPosts , setSelectPost] = useState([])
 
-     const [types , setTypes] = useState([])
+
 
      useEffect(()=>{
          Axios.get('http://localhost:5000/api/articles')
          .then((res)=>{
             setPosts(res.data)
+            setSelectPost(res.data)
+            let typees = res.data.map(ele=>ele.type)
+            typees.unshift('All')
+            setTypes(Array.from(new Set(typees)))
          })
      }, [])
 
 
-     const allPosts = posts.map((ele,i)=>{
-        return <OneCardArticle
-              title = {ele.title}
-              description ={ele.description}
-              type ={ele.type}
-              url = {ele.image} />
-      })
+    //  const allPosts = posts.map((ele,i)=>{
+    //     return <OneCardArticle
+    //           title = {ele.title}
+    //           description ={ele.description}
+    //           type ={ele.type}
+    //           url = {ele.image} />
+    //   })
+    const allPosts = selectPosts.map(post =>{
+        return <OneCardArticle post={post} setSelectPost={props.setSelectPost}/>
+    })
 
+    let allSelect = types.map(ele => <option value={ele}>{ele}</option>)
+    console.log('Types===', types)
 
       /* =================
      Functions Handler  
      ================= */
 
-
+     const onChangeHandler = (e) =>{
+        let value = e.target.value
+        if (value == "All") { // if the select all show all the movies 
+            setSelectPost(posts)
+        }else { // if not show only the movie type amd we use filter method ! 
+            setSelectPost(posts.filter(post => post.type == value))
+        }
+    
+    }
 
 
 
@@ -43,7 +62,7 @@ export default function AllArticales(props) {
 
 
  /* =======================
-     Foorm Displat all posts  
+     Foorm Display all posts  
      ====================== */
 
     return (
@@ -53,8 +72,8 @@ export default function AllArticales(props) {
                     <Form >
                         <Form.Group controlId="exampleForm.SelectCustom" >
                             <Form.Label style={{color:"white"}} >Type of the Article </Form.Label>
-                            <Form.Control as="select">
-                          
+                            <Form.Control as="select" ustom onChange ={onChangeHandler}>
+                            {allSelect}
                             </Form.Control>
                         </Form.Group>
                     </Form>

@@ -4,8 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import jwt_decode from "jwt-decode";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom"
-
-import NavBar from "./components/NavBar"
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
 import AllArticales from "./components/AllArticales"
 import SignUp from './components/SignUp';
 import Login from "./components/LogIn";
@@ -13,6 +14,7 @@ import Profile from "./components/Profile";
 import AuthRoute from "./components/AuthRoute"
 import EditProfile from './components/EditProfile';
 import AddPost from './components/AddPost';
+import Show from "./pages/Show"
 
 function App() {
   const [dataLoading, setDataloading] = useState(false)
@@ -45,6 +47,11 @@ function App() {
             auth={auth} />
           </Route>
 
+
+          <Route  path='/posts/:title'>
+         <Show />
+        </Route>
+
     <Route path = "/editprofile/:id">
       <EditProfile 
       auth={auth} />
@@ -75,8 +82,9 @@ function App() {
 
 
     <Route exact path="/">
+      <Home/>
     </Route>
-   
+   <Footer/>
     </Router>
     }
     </div>
