@@ -48,9 +48,9 @@ export default function AllArticales(props) {
 
      const onChangeHandler = (e) =>{
         let value = e.target.value
-        if (value == "All") { // if the select all show all the movies 
+        if (value == "All") { 
             setSelectPost(posts)
-        }else { // if not show only the movie type amd we use filter method ! 
+        }else {
             setSelectPost(posts.filter(post => post.type == value))
         }
     

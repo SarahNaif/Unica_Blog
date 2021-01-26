@@ -35,7 +35,7 @@ export default function Login(props) {
           localStorage.setItem("jwtToken", token);
           props.loginCallback();
           /*-- Redirect --*/
-          history.push("/");
+          history.push("/profile");
         } else {
         console.log("Email isn't exist try again")
          
@@ -78,7 +78,7 @@ export default function Login(props) {
       </div>
    </form>
 
-       <div class="text-center">Dont have an account? <Link to="/login">Sign up here</Link></div>
+       <div class="text-center">Dont have an account? <Link to="/SignUp">Sign up here</Link></div>
    </div>   
 
       {/* we can add login with google OR facebook via pasport.js  */}

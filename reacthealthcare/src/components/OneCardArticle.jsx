@@ -4,6 +4,13 @@ import { Button, Card, Col, Row } from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 export default function OneCardArticle(props) {
 
+
+
+
+
+     /* ======================
+     Card To show one Artcile 
+     ========================= */
     return (
         <>
         
@@ -16,10 +23,7 @@ export default function OneCardArticle(props) {
                         {props.post.type}
                         <br/>
                         {props.post.description}
-                        <br/>
-                        markdown :
-                        <br/>
-                        
+                        <br/>   
                      </Card.Text>
                      <Row >
                      <Col md={!props.delete? "12" : "5"}>

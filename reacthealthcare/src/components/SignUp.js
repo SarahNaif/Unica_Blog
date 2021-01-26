@@ -4,16 +4,21 @@ import { Row, Form, Col, Button, Alert } from "react-bootstrap";
 import axios from "axios";
 import "./Signup.css"
 export default function SignUp() {
-    const history = useHistory();
 
-    const [user, setUser] = useState({}); // user info
-    const [register, setRegister] = useState(true); // to show aleart
+
+     /* ===================
+      Hooks &  State 
+     ===================*/
+    const history = useHistory();
+    const [user, setUser] = useState({}); 
+    const [register, setRegister] = useState(true);
   
-    //to add the input inside user
+    /* ===================
+      Function handlers
+     ===================*/
     const onChangeInput = ({ target: { name, value } }) => {
       setUser({ ...user, [name]: value });
     };
-    // to add the user info to database
     const onSubmit = (event) => {
       event.preventDefault();
       axios
@@ -32,25 +37,27 @@ export default function SignUp() {
     };
   
     return (
+         /*--- To show Alert If the email isn't exist ---*/
         <>
         {!register && (
             <Alert variant={"danger"}>
               The email is already in use. Please change the email
             </Alert>
           )}
-{/* signup form  */}
 
-<div class="signup-form">
+        {/* SignUp form */}
+
+     <div class="signup-form">
         
          
-        <form action="" method="post">
+    <form action="" method="post">
           <h2>Sign Up</h2>
           <div className="form-group">
               <input type="name" className="form-control" name="name" placeholder="Your name" required="required" onChange={(e) => onChangeInput(e)}/>
           </div>
             <div className="form-group">
               <input type="email" className="form-control" name="email" placeholder="Email Address" required="required" onChange={(e) => onChangeInput(e)}/>
-          </div>
+           </div>
               <div className="form-group">
                 <input type="password" className="form-control" name="password" placeholder="Password" required="required" onChange={(e) => onChangeInput(e)} />
                </div>
@@ -66,8 +73,11 @@ export default function SignUp() {
                     <div className="form-group text-center">
                       <button type="submit" className="btn btn-primary btn-lg w-100"  onClick={(e) => onSubmit(e)}>Sign Up</button>
                     </div>
-       </form>
-                  <div class="text-center">Already have an account? <Link to="/login">Login here</Link></div>
+          </form>
+
+
+          
+          <div class="text-center">Already have an account? <Link to="/login">Login here</Link></div>
           </div>  
       </>
 

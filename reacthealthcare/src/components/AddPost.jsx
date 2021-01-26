@@ -11,7 +11,7 @@ export default function AddPost(props) {
 
   const { _id} = props.auth.currentUser;
   const history = useHistory();
-  const [post, setPost] = useState({ title: "", description: "" , markdown :"" , image:"",userId: _id });
+  const [post, setPost] = useState({ title: "", description: "" , markdown :"" , image:"",  userId: _id });
 
 
  /* =================
@@ -63,9 +63,8 @@ export default function AddPost(props) {
 
           <div class="form-group">
             <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1" name ="type"  onChange={(e) => onChangeInput(e)}>
+            <select class="form-control" id="exampleFormControlSelect1" name = "type"  onChange={(e) => onChangeInput(e)}>
             <option>Sport</option>
-            <option>Exrcise</option>
             <option>Foods</option>
             <option>Mental Health</option>
      

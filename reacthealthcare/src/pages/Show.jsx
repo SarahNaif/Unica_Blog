@@ -7,8 +7,16 @@ import {Link} from 'react-router-dom'
 
 
 export default function Show() {
+
+  /* ===================
+     Hooks & State
+     ===================*/
     const [posts, setPosts] = useState([]);
     const { title } = useParams();
+
+    /* =====================
+      To Fetch all the posts
+     =======================*/
     useEffect(() => {
       fetch('http://localhost:5000/api/articles')
         .then((res) => res.json())
@@ -17,18 +25,20 @@ export default function Show() {
           setPosts(json);
         });
     }, []);
+
+
+
+
+    /*-- Params usage -- */
     const post = posts.find((post) => post.title == title);
     return (
+
+      
+      /* ===================
+      Card For Display 
+     ===================*/
       <>
         {post ? (
-        //   <div style={{color:"white"}}>
-        //     <img src={post.image} alt={post.name} />
-        //     <h2>{post.title}</h2>
-        //     <i>{post.description}</i>
-        //     <p>{post.markdown}</p>
-        //     {/* <a href={bird.homepage}>Read More</a> */}
-        //   </div>
-        
         <Container className="mt-5" style={{color:"black"}} >
             <Row >
                 <Col md="6" >
@@ -39,7 +49,6 @@ export default function Show() {
                     <h6> {post.description}</h6>
                     <h4>{post.type}</h4>
                     <p>{post.markdown}</p>
-                    
                 </Col>
             </Row>
 

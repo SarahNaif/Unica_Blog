@@ -1,16 +1,19 @@
 
 import React , {useEffect , useState}  from "react";
-
-//import { Row, Form, Col, Button, Alert } from "react-bootstrap";
 import axios from "axios";
 import "./UserProfile.css"
 export default function Profile(props) {
-    
 
+
+        /*-- Auth by the user ID--*/
         const { _id} = props.auth.currentUser;
 
-         const [user , setUser] = useState(null)
-    useEffect(() => {
+
+         /* =================
+            Hooks & state
+          ================= */
+        const [user , setUser] = useState(null)
+        useEffect(() => {
         axios.get(`http://localhost:5000/api/user/profile/${_id}`)
           .then(data => {
            console.log(data)
@@ -19,11 +22,17 @@ export default function Profile(props) {
           })
     
       }, [])
+
+
     return ( 
+
+         /* =================
+            Form Profile 
+        ================= */
         user ? 
-        <div class="row py-5 px-4">
-    <div class="col-md-5 mx-auto">
-        <div class="bg-white shadow rounded overflow-hidden">
+    <div class="row py-5 px-4">
+        <div class="col-md-5 mx-auto">
+          <div class="bg-white shadow rounded overflow-hidden">
             <div class="px-4 pt-0 pb-4 cover">
                 <div class="media align-items-end profile-head">
                     <div class="profile mr-3"><img src={user.image} alt="..." width="130" class="rounded mb-2 img-thumbnail"/><a href={`/editprofile/${_id}`} class="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
@@ -40,12 +49,9 @@ export default function Profile(props) {
                     </li>
                        <li>
                        <a href="/new" class="btn btn-outline-dark btn-sm btn-block">add posts</a>
-
                        </li>
-                      
                 </ul>
             </div>
-            
             <div class="py-4 px-4">
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <h5 class="mb-0">Recent Posts</h5><a href="/articles" class="btn btn-link text-muted">Show all</a>
