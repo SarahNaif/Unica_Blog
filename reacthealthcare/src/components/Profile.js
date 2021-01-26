@@ -30,7 +30,7 @@ export default function Profile(props) {
             Form Profile 
         ================= */
         user ? 
-    <div class="row py-5 px-4">
+    <div class="row py-5 px-4 main">
         <div class="col-md-5 mx-auto">
           <div class="bg-white shadow rounded overflow-hidden">
             <div class="px-4 pt-0 pb-4 cover">
@@ -45,7 +45,7 @@ export default function Profile(props) {
             <div class="bg-light p-4 d-flex justify-content-end text-center">
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">0</h5><small class="text-muted"> <i class="fa fas fa-image mr-1"></i>Posts</small>
+    <h5 class="font-weight-bold mb-0 d-block">{user.articles.length}</h5><small class="text-muted"> <i class="fa fas fa-image mr-1"></i>Posts</small>
                     </li>
                        <li>
                        <a href="/new" class="btn btn-outline-dark btn-sm btn-block">add posts</a>

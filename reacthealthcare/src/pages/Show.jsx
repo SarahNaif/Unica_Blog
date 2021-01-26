@@ -42,7 +42,7 @@ export default function Show() {
         <Container className="mt-5" style={{color:"black"}} >
             <Row >
                 <Col md="6" >
-                    <img width="100%" height="100%" src={post.image} alt="" srcset="" />
+                <img width="100%"  src={post.image} alt="" srcset="" />
                 </Col>
                 <Col md="6">
                     <h2>{post.title}</h2>

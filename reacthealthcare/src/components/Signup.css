@@ -16,17 +16,20 @@
     
 
 }
-.signup-form h2 {
+.signup-form h2 .btn-primary{
     color: #333;
     font-weight: bold;
     margin: 0 0 25px;
+   
 }
 .signup-form form {
+    
     margin-bottom: 15px;
     background: #fff;
     border: 1px solid #f4f4f4;
     box-shadow: 0 12px 40px rgba(0,0,0,.12);
     padding: 40px 50px;
+    caret-color: rgb(98, 154, 98);
 }
 .signup-form .form-group {
     margin-bottom: 20px;
@@ -41,17 +44,29 @@
 .signup-form .btn {        
     font-size: 16px;
     font-weight: bold;
-    background: #00c1c0;
+    background:rgb(98, 154, 98);
     border: none;
     min-width: 140px;
     outline: none !important;
 }
-.signup-form .btn:hover, .signup-form .btn:focus {
-    background: #00b3b3;
+.signup-form .btn:hover .signup-form .btn:focus{
+    background: rgb(98, 154, 98);
 }
+#but{
+    background-color:  rgb(98, 154, 98);
+    border-radius: 20px;
+               box-shadow: inset 0px 5px 5px #e0e2c4;
+               -moz-box-shadow:    inset 0 0 10px #e0e2c4;
+               -webkit-box-shadow: inset 0 0 10px #e0e2c4;
+               box-shadow:         inset 0 0 10px #e0e2c4;    
+ 
+}
+
+
 .signup-form a {
-    color: #00c1c0;
+    color:  rgb(98, 154, 98);
     text-decoration: none;
+
 }	
 .signup-form a:hover {
     text-decoration: underline;

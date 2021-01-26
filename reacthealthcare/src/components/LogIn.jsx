@@ -74,7 +74,7 @@ export default function Login(props) {
            <br></br>
               
       <div className="form-group text-center">
-             <button type="submit" className="btn btn-primary btn-lg w-100 h-100" onClick={(e) => onSubmit(e)}>Login</button>
+             <button id="but" type="submit" className="btn btn-primary btn-lg w-100 h-100" onClick={(e) => onSubmit(e)}>Login</button>
       </div>
    </form>
 

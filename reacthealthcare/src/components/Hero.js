@@ -24,12 +24,12 @@ const Hero = () => {
         chevronWidth={chevronWidth}
       >
         
-        <div style={{ height: 620}}><img style={{width: 355, height: 620, background: '#EEE' }}src="https://res.cloudinary.com/dvukj9sqf/image/upload/v1611484619/h4-post-img-1-1000x1458_bzpmvd.jpg" alt="" /></div>
-        <div style={{ height: 620}}><img style={{width: 355, height: 620, background: '#EEE' }}src="https://res.cloudinary.com/dvukj9sqf/image/upload/v1611470361/project%203/h4-post-img-3-1000x1458_wyyzpu.jpg" alt="" /></div>
+        <div style={{ height: 620}}><img style={{width: 355, height: 620, background: '#EEE' }}src="https://i.pinimg.com/564x/e4/af/ef/e4afefaf0ef78bb70795ce896f21ce7c.jpg" alt="" /></div>
+        <div style={{ height: 620}}><img style={{width: 355, height: 620, background: '#EEE' }}src="https://i.pinimg.com/564x/83/24/9e/83249e29aaa88afae1a8f0b22e07ed40.jpg" alt="" /></div>
         
-        <div style={{ height: 620 }}><img style={{width: 355, height: 620, background: '#EEE' }}src="https://res.cloudinary.com/dvukj9sqf/image/upload/v1611470324/project%203/h4-post-img-4-1000x1458_j2yf13.jpg" alt="" /></div>
+        <div style={{ height: 620 }}><img style={{width: 355, height: 620, background: '#EEE' }}src="https://i.pinimg.com/564x/5e/16/b3/5e16b336bbb5ed06f0387119ebade594.jpg" alt="" /></div>
         <div style={{ height: 620 }}><img style={{width: 355, height: 620, background: '#EEE' }}src="https://res.cloudinary.com/dvukj9sqf/image/upload/v1611495371/imh%20header/h4-post-img-8-1000x1458_ta6sxx.jpg" alt="" /></div>
-        <div style={{ height: 620}}><img style={{width: 355, height: 620, background: '#EEE' }}src="https://res.cloudinary.com/dvukj9sqf/image/upload/v1611470331/project%203/h4-post-img-2-1000x1458_q98mu5.jpg" alt="" /></div>
+        <div style={{ height: 620}}><img style={{width: 355, height: 620, background: '#EEE' }}src="https://i.pinimg.com/564x/e7/52/d4/e752d42f15b1c14eb357a3b06d1b7d55.jpg" alt="" /></div>
 
 
         <div style={{ height: 620}}><img style={{width: 355, height: 620, background: '#EEE' }}src="https://res.cloudinary.com/dvukj9sqf/image/upload/v1611470336/project%203/h4-post-img-5-1000x1458_lqagdw.jpg" alt="" /></div>

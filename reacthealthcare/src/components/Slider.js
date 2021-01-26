@@ -26,7 +26,7 @@ const Slider = () => {
               outsideChevron
               chevronWidth={chevronWidth}
             >
-              <div style={{ height: 400 }}>
+              <div style={{ height: 500 }}>
                 {/* Card 1 */}
                 <div className="box-card">
                   <img
@@ -41,12 +41,11 @@ const Slider = () => {
                         title="The Greatest Treasure"
                         className="text-title link"
                       >
-                        The Greatest Treasure
+                        The Best Air-Purifying Plants for Your Home
                       </Link>
                     </h4>
                     <p className="text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                    Living in an energy efficient, modern building can have unintended side effects. One of these side effects is less air flow.
                     </p>
                     <Link href="#" className="link">
                     Read More &nbsp;
@@ -56,7 +55,9 @@ const Slider = () => {
                 </div>
                 {/* END Card 1 */}
               </div>
-              <div style={{ height: 400 }}>
+             
+            
+              <div style={{ height: 500 }}>
                 {/* Card 1 */}
                 <div className="box-card ">
                   <img
@@ -71,12 +72,11 @@ const Slider = () => {
                         title="The Greatest Treasure"
                         className="text-title link"
                       >
-                        The Greatest Treasure
+                        how to stay focused
                       </Link>
                     </h4>
                     <p className="text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                    There are several techniques that can help you zone in on the task in front of you. If you need help staying focused, try one — or all 10
                     </p>
                     <Link href="#" className="link">
                       Read More &nbsp;
@@ -86,11 +86,95 @@ const Slider = () => {
                 </div>
                 {/* END Card 1 */}
               </div>
-            
-              <div style={{ height: 400}}></div>
-              <div style={{ height: 400, background: "#EEE" }}>Fourth card</div>
-              <div style={{ height: 400, background: "#EEE" }}>Third card</div>
-              <div style={{ height: 400, background: "#EEE" }}>Fourth card</div>
+              <div style={{ height: 500 }}>
+                {/* Card 1 */}
+                <div className="box-card ">
+                  <img
+                    src="https://res.cloudinary.com/dvukj9sqf/image/upload/v1611667868/woman-nature-alone-portrait-hiking-1296x728-header_s6spvk.jpg"
+                    className="img w-100 h-400 "
+                    alt="..."
+                  />
+                  <div className="mt-5">
+                    <h4 className="entry-title  ">
+                      <Link
+                        to=""
+                        title="The Greatest Treasure"
+                        className="text-title link"
+                      >
+                        How to Focus on Yourself 
+                      </Link>
+                    </h4>
+                    <p className="text">
+                    When was the last time you stopped to consider your needs.? 
+                    </p>
+                    <Link href="#" className="link">
+                      Read More &nbsp;
+                      <i class="fa fas fa-angle-double-right"></i>
+                    </Link>
+                  </div>
+                </div>
+                {/* END Card 1 */}
+              </div>
+              <div style={{ height: 500 }}>
+                {/* Card 1 */}
+                <div className="box-card ">
+                  <img
+                    src="https://res.cloudinary.com/dvukj9sqf/image/upload/v1611668503/women-exercising-at-the-beach-1296x728-header_tpabey.jpg"
+                    className="img w-100 h-400 "
+                    alt="..."
+                  />
+                  <div className="mt-5">
+                    <h4 className="entry-title  ">
+                      <Link
+                        to=""
+                        title="The Greatest Treasure"
+                        className="text-title link"
+                      >
+                        8 Ways to Shake Up Your Walking Routine
+                      </Link>
+                    </h4>
+                    <p className="text">
+                    walking is a good choice for people looking to stay healthy..
+                    </p>
+                    <Link href="#" className="link">
+                      Read More &nbsp;
+                      <i class="fa fas fa-angle-double-right"></i>
+                    </Link>
+                  </div>
+                </div>
+                {/* END Card 1 */}
+              </div>
+              <div style={{ height: 500 }}>
+                {/* Card 1 */}
+                <div className="box-card ">
+                  <img
+                    src="https://res.cloudinary.com/dvukj9sqf/image/upload/v1611670060/post-s-img-24_qqqe1o.jpg"
+                    className="img w-100 h-400 "
+                    alt="..."
+                  />
+                  <div className="mt-5">
+                    <h4 className="entry-title  ">
+                      <Link
+                        to=""
+                        title="The Greatest Treasure"
+                        className="text-title link"
+                      >
+                        15 Healthy Staples You Should Always Have on Hand
+                      </Link>
+                    </h4>
+                    <p className="text">
+                    Throwing together a quick, nutritious meal requires a well-stocked kitchen
+                    </p>
+                    <Link href="#" className="link">
+                      Read More &nbsp;
+                      <i class="fa fas fa-angle-double-right"></i>
+                    </Link>
+                  </div>
+                </div>
+                {/* END Card 1 */}
+              </div>
+
+              
             </ItemsCarousel>
           </div>
         </div>

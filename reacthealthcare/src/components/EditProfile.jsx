@@ -70,7 +70,7 @@ export default function EditProfile(props) {
           </div>
 
           <div className="form-group text-center">
-                  <button type="submit" className="btn btn-primary btn-lg w-100" onClick={(e)=> onSubmit(e)}>Edit Profile</button>
+                  <button id="but" type="submit" className="btn btn-primary btn-lg w-100" onClick={(e)=> onSubmit(e)}>Edit Profile</button>
           </div>
        </form>
 

@@ -71,7 +71,7 @@ export default function SignUp() {
                     <label className="checkbox-inline"><input type="checkbox" required="required"/> I accept the <Link to="#">Terms of Use</Link> &amp; <Link href="#">Privacy Policy</Link></label>
                   </div>
                     <div className="form-group text-center">
-                      <button type="submit" className="btn btn-primary btn-lg w-100"  onClick={(e) => onSubmit(e)}>Sign Up</button>
+                      <button id="but" type="submit" className="btn btn-primary btn-lg w-100"  onClick={(e) => onSubmit(e)}>Sign Up</button>
                     </div>
           </form>
 

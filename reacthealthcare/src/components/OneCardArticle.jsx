@@ -1,39 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import Axios from 'axios'
-import { Button, Card, Col, Row } from 'react-bootstrap'
-import {Link} from 'react-router-dom'
-export default function OneCardArticle(props) {
-
-
-
-
-
-     /* ======================
-     Card To show one Artcile 
-     ========================= */
+import React from 'react'
+import { Link } from "react-router-dom";
+import {Dropdown,DropdownButton} from 'react-bootstrap'
+import "./OneCardArticale.css"
+import {Col} from "react-bootstrap"
+export default function OneCardArticle (props)  {
+ 
+  
     return (
-        <>
-        
-        <Col md="4" sm="4" className="mt-3">
-            <Card  className ="card-movie">
-                <Card.Img variant="top" src={props.post.image} height ="300px" style={{    margin :"auto" , objectFit :"cover"}}  />
-                <Card.Body>
-                    <Card.Title>{props.post.title}</Card.Title>
-                    <Card.Text>
-                        {props.post.type}
-                        <br/>
-                        {props.post.description}
-                        <br/>   
-                     </Card.Text>
-                     <Row >
-                     <Col md={!props.delete? "12" : "5"}>
-                    
-                    <Link to={`/posts/${props.post.title}`}> <Button > more info</Button> </Link> 
-                    </Col>
-                    </Row>
-                </Card.Body>
-            </Card>
-        </Col>
-        </>
+       
+        <Col sm="4"md="4" >
+           
+                <div class="card mb-5">
+                    <Link to={`/posts/${props.post.title}`} class="link-card">
+                        <img src={props.post.image} class=" w-100 h-400" alt="..."/>
+                            <div class="card-body">
+                                <h5 class="card-title"><span>{props.post.title}</span></h5><p class="card-text"> {props.post.description}</p><p class="card-text"><span>{props.post.type}</span><small class="text-muted"><i class="fa fa-heart-o" aria-hidden="true"></i></small></p></div></Link>
+                                </div>
+    </Col>
+
     )
 }

@@ -38,7 +38,6 @@ export default function AllArticales(props) {
     const allPosts = selectPosts.map(post =>{
         return <OneCardArticle post={post} setSelectPost={props.setSelectPost}/>
     })
-
     let allSelect = types.map(ele => <option value={ele}>{ele}</option>)
     console.log('Types===', types)
 
