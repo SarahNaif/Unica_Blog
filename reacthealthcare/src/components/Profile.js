@@ -1,9 +1,14 @@
 
 import React , {useEffect , useState}  from "react";
+import { Col, Container, Form, Row } from 'react-bootstrap'
 import axios from "axios";
 import "./UserProfile.css"
-export default function Profile(props) {
+import "./liks.css"
 
+import { Link } from "react-router-dom";
+
+export default function Profile(props) {
+  
 
         /*-- Auth by the user ID--*/
         const { _id} = props.auth.currentUser;
@@ -22,7 +27,22 @@ export default function Profile(props) {
           })
     
       }, [])
-
+      console.log(user)
+const Allfavorite=!user?"":user.favoriteArticales.map((ele)=>{
+    return ( 
+        <Col sm="4" md="4" >
+                <div  class="card mb-5" >
+                    <Link to={`/posts/${ele._id}`} class="link-card">
+                        <img src={ele.image} class=" w-100 h-400"  alt="..."/>
+                            <div   class="card-body">
+                                <h5 class="card-title"><span>{ele.title}</span> <i className="fa fas fa-leaf"></i></h5> </div></Link>
+                                </div>  
+                                
+    </Col>
+    )
+ 
+    
+})
 
     return ( 
 
@@ -55,13 +75,12 @@ export default function Profile(props) {
             <div class="py-4 px-4">
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <h5 class="mb-0">Recent Posts</h5><a href="/articles" class="btn btn-link text-muted">Show all</a>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 mb-2 pr-lg-1"><img src="https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"/></div>
-                    <div class="col-lg-6 mb-2 pl-lg-1"><img src="" alt="" class="img-fluid rounded shadow-sm"/></div>
-                    <div class="col-lg-6 pr-lg-1 mb-2"><img src="" alt="" class="img-fluid rounded shadow-sm"/></div>
-                    <div class="col-lg-6 pl-lg-1"><img src="" alt="" class="img-fluid rounded shadow-sm"/></div>
-                </div>
+                 </div>
+            <Row >
+            
+                {Allfavorite}  
+                </Row>  
+                
             </div>
         </div>
     </div>

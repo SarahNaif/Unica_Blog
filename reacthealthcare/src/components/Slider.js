@@ -78,7 +78,7 @@ const Slider = () => {
                     <p className="text">
                     There are several techniques that can help you zone in on the task in front of you. If you need help staying focused, try one — or all 10
                     </p>
-                    <Link href="#" className="link">
+                    <Link to="#" className="link">
                       Read More &nbsp;
                       <i class="fa fas fa-angle-double-right"></i>
                     </Link>

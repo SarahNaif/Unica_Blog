@@ -28,13 +28,16 @@ export default function AllArticales(props) {
      }, [])
 
 
-    //  const allPosts = posts.map((ele,i)=>{
-    //     return <OneCardArticle
-    //           title = {ele.title}
-    //           description ={ele.description}
-    //           type ={ele.type}
-    //           url = {ele.image} />
-    //   })
+    /*--  const allPosts = posts.map((ele,i)=>{
+           return <OneCardArticle
+             title = {ele.title}
+             description ={ele.description}
+              type ={ele.type}
+              url = {ele.image} />
+      }) --*/
+
+
+      
     const allPosts = selectPosts.map(post =>{
         return <OneCardArticle post={post} setSelectPost={props.setSelectPost}/>
     })

@@ -25,7 +25,7 @@ function App() {
      =================== */
   const [dataLoading, setDataloading] = useState(false)
   const [auth, setAuth] = useState({ currentUser: null, isLoggedIn: false });
-
+  const [selectArticle, setSelectArticle] = useState({});
 
    /* =====================
      Autntcation Function
@@ -68,8 +68,11 @@ function App() {
           </Route>
 
                    {/*---To the Show page---*/}
-          <Route  path='/posts/:title'>
-            <Show />
+                   <Route  path='/posts/:id'>
+            <Show  setAuth = {setAuth}
+            user = {auth.currentUser}
+            selectArticle={selectArticle} 
+             />
           </Route>
 
                     {/*---To the Edit user Profile---*/}

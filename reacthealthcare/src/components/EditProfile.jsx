@@ -74,7 +74,7 @@ export default function EditProfile(props) {
           </div>
        </form>
 
-          <div class="text-center">Return To the profile page? <Link to="/login"> </Link></div>
+          <div class="text-center">Return To the profile page? <Link to="/profile"> </Link></div>
       </div>  
       </>
     )
